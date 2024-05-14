@@ -25,13 +25,12 @@ export const LoginPage = () => {
 
   const onSubmit = ( event ) => {
     event.preventDefault();
-    // console.log({ email, password });
+
     //! No es esta la accion a despachar //hacef dispatch del thunk
         dispatch( startLoginWithEmailPassword({email, password}) );
   }
  
   const onGoogleSignIn = () => {
-    console.log('onGoogleSignIn');
     dispatch( startGoogleSignIn() );
 
   } 
@@ -41,7 +40,7 @@ export const LoginPage = () => {
   return (
 
     <AuthLayout title='Login'>
-
+      
        <form onSubmit={ onSubmit } className='animate__animated animate__fadeIn animate__faster'>
           <Grid container>
           <Grid item xs={ 12 } sx ={{ mt: 2 }}>
@@ -84,6 +83,9 @@ export const LoginPage = () => {
                 <Grid item xs={ 12 } sm={ 6 }>
                   <Button 
                   disabled = { isAuthenticating }
+                  sx={{backgroundColor: '#9c5252', '&:hover': {
+                    backgroundColor: '#6c1919',
+                  }}}
                   type='submit' 
                   variant='contained' 
                   fullWidth 
@@ -93,6 +95,9 @@ export const LoginPage = () => {
                 </Grid>
                 <Grid item xs={ 12 } sm={ 6 }>
                   <Button 
+                  sx={{backgroundColor: '#9c5252', '&:hover': {
+                    backgroundColor: '#6c1919',
+                  }}}
                   disabled = { isAuthenticating }
                   variant='contained' 
                   fullWidth
@@ -105,7 +110,7 @@ export const LoginPage = () => {
 
                 <Grid container direction='row' justifyContent='end'>
 
-                  <Link sx={{ mt: 2 }} component={ RouterLink } color='primary' to="/auth/register">
+                  <Link sx={{ mt: 2 }} component={ RouterLink } color='#9c5252' to="/auth/register">
                   Crear una cuenta
                   </Link>
 

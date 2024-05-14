@@ -101,6 +101,9 @@ export const RegisterPage = () => {
                   <Grid item xs={ 12 }>
                     <Button
                     disabled={ isCheckingAuthentication }
+                    sx={{backgroundColor: '#9c5252', '&:hover': {
+                      backgroundColor: '#6c1919',
+                    }}}
                     type= "submit"
                      variant='contained' 
                      fullWidth 
@@ -113,7 +116,7 @@ export const RegisterPage = () => {
                 <Grid container direction='row' justifyContent='end'>
 
                     <Typography sx={{ mr: 1, mt: 1.5  }}>¿Ya tienes cuenta?</Typography>
-                    <Link sx={{ mt: 2 }} component={ RouterLink } color='primary' to="/auth/login">
+                    <Link sx={{ mt: 2 }} component={ RouterLink }  color='#9c5252' to="/auth/login">
                     ingresar
                     </Link>
 

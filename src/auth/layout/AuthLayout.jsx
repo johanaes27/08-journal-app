@@ -55,7 +55,7 @@ export const AuthLayout = ({ children, title='' }) => {
           >
 
               <Typography  variant="h3" style={{ fontFamily: '"Poetsen One", sans-serif'  }}>
-                CalendarApp
+                JournalApp
               </Typography>
 
     
